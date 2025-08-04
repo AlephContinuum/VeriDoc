@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OCR Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        form { margin-bottom: 20px; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
+        input[type="text"] { width: 100%; padding: 8px; margin-bottom: 10px; }
+        button { padding: 10px 15px; }
+        #results-container { padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
+        .mismatch { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>OCR Extraction & Verification</h1>
+
+    <form id="upload-form">
+        <h2>Step 1: Upload Document</h2>
+        <input type="file" id="document-upload" accept="image/*, .pdf">
+        <label><input type="checkbox" id="is-handwritten"> This is a handwritten document</label><br><br>
+        <button type="submit">Extract Text and Autofill</button>
+    </form>
+
+    <form id="data-form">
+        <h2>Step 2: Verify Data</h2>
+        <p>Modify fields if necessary, then click Verify.</p>
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name"><br>
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name"><br>
+        <label for="date_of_birth">Date of Birth:</label>
+        <input type="text" id="date_of_birth" name="date_of_birth"><br>
+        <button type="button" id="verify-button">Verify Data</button>
+    </form>
+
+    <div id="results-container">
+        <h3>Verification Results</h3>
+        <pre id="verification-results"></pre>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

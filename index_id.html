@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ID OCR Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        form { margin-bottom: 20px; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
+        input[type="text"] { width: 100%; padding: 8px; margin-bottom: 10px; }
+        button { padding: 10px 15px; }
+    </style>
+</head>
+<body>
+    <h1>ID Document OCR & Autofill</h1>
+
+    <form id="upload-form">
+        <h2>Step 1: Upload ID Document</h2>
+        <input type="file" id="document-upload" accept="image/*, .pdf">
+        <button type="submit">Extract and Autofill</button>
+    </form>
+
+    <form id="data-form">
+        <h2>Step 2: Extracted Details</h2>
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name"><br>
+        <label for="document_type">Document Type:</label>
+        <input type="text" id="document_type" name="document_type"><br>
+        <label for="document_number">Document Number:</label>
+        <input type="text" id="document_number" name="document_number"><br>
+        <label for="date_of_birth">Date of Birth:</label>
+        <input type="text" id="date_of_birth" name="date_of_birth"><br>
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" name="gender"><br>
+    </form>
+
+    <script src="app_id.js"></script>
+</body>
+</html>
